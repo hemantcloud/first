@@ -21,91 +21,94 @@ class _CarouselWithDotsPageState extends State<CarouselWithDotsPage> {
   Widget build(BuildContext context) {
     final List<Widget> imageSliders = widget.imgList
         .map((item) => Container(
-      child: ClipRRect(
-        borderRadius: BorderRadius.all(
-          Radius.circular(5.0),
-        ),
-        child: Stack(
-          children: [
-            // Image.network(
-            //   item,
-            //   fit: BoxFit.cover,
-            //   width: 1000,
-            // ),
-            Image.asset(
-              item,
-              fit: BoxFit.cover,
-              width: 1000,
-              // height: 390.0,
-            ),
-            Positioned(
-              top: 20.0,
-              left: 15.0,
-              // top: 32.0,
-              // left: 24.0,
-              right: 0.0,
-              child: Container(
-                width: MediaQuery.of(context).size.width * 0.5,
-                decoration: const BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [
-                      // Color.fromARGB(200, 0, 0, 0),
-                      Color.fromARGB(0, 0, 0, 0),
-                      Color.fromARGB(0, 0, 0, 0),
-                    ],
-                    begin: Alignment.bottomCenter,
-                    end: Alignment.topCenter,
-                  ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.all(
+                  Radius.circular(5.0),
                 ),
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 20,
-                  vertical: 10,
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
-                    Text(
-                      // 'No. ${widget.imgList.indexOf(item)} image',
-                      'Super Flash Sale\n50% Off',
-                      maxLines: 2,
-                      style: TextStyle(
-                        color: Colors.white,
-                        // fontSize: 24.0,
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.w700,
-                      ),
+                child: Stack(
+                  children: [
+                    // Image.network(
+                    //   item,
+                    //   fit: BoxFit.cover,
+                    //   width: 1000,
+                    // ),
+                    Image.asset(
+                      item,
+                      fit: BoxFit.cover,
+                      width: 1000,
+                      // height: 390.0,
                     ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 0.0, bottom: 10.0),
-                    ),
-                    SlideCountdownSeparated(
-                      duration: Duration(hours: 8, minutes: 30),
-                      padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                      width: 42.0,
-                      height: 42.0,
-                      separator: ' : ',
-                      textStyle: TextStyle(
-                        color: AppColors.secondaryColor,
-                        fontWeight: FontWeight.w700,
-                        // fontSize: 16.0,
-                      ),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                          borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                      ),
-                      separatorStyle: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18.0,
+                    Positioned(
+                      top: 20.0,
+                      left: 15.0,
+                      // top: 32.0,
+                      // left: 24.0,
+                      right: 0.0,
+                      child: Container(
+                        width: MediaQuery.of(context).size.width * 0.5,
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              // Color.fromARGB(200, 0, 0, 0),
+                              Color.fromARGB(0, 0, 0, 0),
+                              Color.fromARGB(0, 0, 0, 0),
+                            ],
+                            begin: Alignment.bottomCenter,
+                            end: Alignment.topCenter,
+                          ),
+                        ),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 20,
+                          vertical: 10,
+                        ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text(
+                              // 'No. ${widget.imgList.indexOf(item)} image',
+                              'Super Flash Sale\n50% Off',
+                              maxLines: 2,
+                              style: TextStyle(
+                                color: Colors.white,
+                                // fontSize: 24.0,
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(top: 0.0, bottom: 10.0),
+                            ),
+                            SlideCountdownSeparated(
+                              duration: Duration(hours: 8, minutes: 30),
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 10, vertical: 5),
+                              width: 42.0,
+                              height: 42.0,
+                              separator: ' : ',
+                              textStyle: TextStyle(
+                                color: AppColors.secondaryColor,
+                                fontWeight: FontWeight.w700,
+                                // fontSize: 16.0,
+                              ),
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5.0)),
+                              ),
+                              separatorStyle: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18.0,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
                 ),
               ),
-            ),
-          ],
-        ),
-      ),
-    )).toList();
+            ))
+        .toList();
 
     return Column(
       children: [
@@ -121,7 +124,7 @@ class _CarouselWithDotsPageState extends State<CarouselWithDotsPage> {
         //   ),
         // ),
         Padding(
-          padding: const EdgeInsets.only(left: 16.0,right: 16.0,bottom: 10.0),
+          padding: const EdgeInsets.only(left: 16.0, right: 16.0, bottom: 10.0),
           child: CarouselSlider(
             items: imageSliders,
             options: CarouselOptions(

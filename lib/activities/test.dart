@@ -1,5 +1,4 @@
 import 'package:first/activities/register.dart';
-import 'package:first/testing.dart';
 import 'package:flutter/material.dart';
 import 'package:google_language_fonts/google_language_fonts.dart';
 import 'dart:ui';

@@ -49,6 +49,7 @@ dependencies:
   intl: ^0.17.0
   flutter_calendar_carousel: ^2.4.1
 #  syncfusion_flutter_datepicker: ^20.3.61
+  url_launcher: ^6.1.10
 
 dev_dependencies:
   flutter_test:
